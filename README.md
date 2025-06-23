@@ -1,7 +1,7 @@
 # Luhn Validator Package
 [![Go](https://github.com/jjnes/luhn/actions/workflows/go.yml/badge.svg)](https://github.com/jjnes/luhn/actions)
 [![GitHub tag](https://img.shields.io/github/v/tag/jjnes/luhn?label=version&sort=semver)](https://github.com/jjnes/luhn/tags)
-[![codecov](https://codecov.io/gh/jjnes/luhn/branch/main/graph/badge.svg)](https://codecov.io/gh/jjnes/luhn)
+[![codecov](https://codecov.io/gh/JjNes/Luhn/graph/badge.svg?token=S4Q4YYVR0B)](https://codecov.io/gh/JjNes/Luhn)
 
 This package provides functionality to validate numbers using the Luhn algorithm, which is commonly used to validate credit card numbers and other identification numbers.
 
