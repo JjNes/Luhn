@@ -2,7 +2,7 @@ name: Go
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
   pull_request:
     branches: [main]
 
@@ -19,11 +19,10 @@ jobs:
         with:
           go-version: '1.24.x'
 
-      - name: Run tests with coverage
-        run: go test -v -coverprofile=coverage.out ./...
+      - name: Run tests
+        run: go test -coverprofile=coverage.txt
 
-      - name: Upload coverage to Codecov
+      - name: Upload results to Codecov
         uses: codecov/codecov-action@v5
         with:
-          files: coverage.out
-          flags: unittests
+          token: ${{ secrets.CODECOV_TOKEN }}
