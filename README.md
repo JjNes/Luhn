@@ -14,7 +14,13 @@ go get github.com/jjnes/luhn
 ## Usage
 
 ```go
-import "luhn"
+package main
+
+import (
+	"fmt"
+
+	"github.com/jjnes/luhn"
+)
 
 func main() {
     // Example usage for integer
