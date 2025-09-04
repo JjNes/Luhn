@@ -37,10 +37,15 @@ func main() {
 	prefix := 123
 	fullNumber := luhn.GenerateLuhnNumber(prefix)
 	isValidFullNumber := luhn.IsValidInt(fullNumber)
-	fmt.Printf("Is valid %d: %t", fullNumber, isValidFullNumber)
+	fmt.Printf("Is valid %d: %t\n", fullNumber, isValidFullNumber)
 }
 ```
-
+Output:
+```
+Is valid number: true
+Is valid string: true
+Is valid 1234: true
+```
 ## Testing
 
 Tests are provided for the Luhn validation functions using the Go testing framework. To run the tests, use:
