@@ -1,6 +1,6 @@
 package luhn
 
-func IsValid(number int) bool {
+func IsValidInt(number int) bool {
 	sum := number % 10
 	number /= 10
 	even := true
@@ -41,4 +41,30 @@ func IsValidStr(number string) bool {
 		even = !even
 	}
 	return sum%10 == 0
+}
+
+func GenerateLuhnNumber(number int) int {
+	sum := luhnCheckDigit(number)
+
+	fullNumder := number*10 + sum
+
+	return fullNumder
+}
+
+func luhnCheckDigit(number int) int {
+	sum := 0
+	even := true
+	for number > 0 {
+		digit := number % 10
+		number /= 10
+		if even {
+			digit *= 2
+			if digit > 9 {
+				digit -= 9
+			}
+		}
+		sum += digit
+		even = !even
+	}
+	return (10 - (sum % 10)) % 10
 }

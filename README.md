@@ -23,15 +23,21 @@ import (
 )
 
 func main() {
-    // Example usage for integer
-    number := 1230
-    isValid := luhn.IsValid(number)
-    fmt.Println("Is valid:", isValid)
-    
-    // Example usage for string
-    numberStr := "1230"
-    isValidStr := luhn.IsValidStr(numberStr)
-    fmt.Println("Is valid string:", isValidStr)
+	// Example usage for integer
+	number := 1230
+	isValid := luhn.IsValidInt(number)
+	fmt.Println("Is valid number:", isValid)
+
+	// Example usage for string
+	numberStr := "1230"
+	isValidStr := luhn.IsValidStr(numberStr)
+	fmt.Println("Is valid string:", isValidStr)
+
+	// Example usage for generate number
+	prefix := 123
+	fullNumber := luhn.GenerateLuhnNumber(prefix)
+	isValidFullNumber := luhn.IsValidInt(fullNumber)
+	fmt.Printf("Is valid %d: %t", fullNumber, isValidFullNumber)
 }
 ```
 
